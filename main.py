@@ -4,7 +4,9 @@ file_path = "doc_given/a_example.in"
 
 
 def main():
-    general_info, rides = import_data(file_path)
+    general_info, rides, vehicles = import_data(file_path)
+
+
 
 
 

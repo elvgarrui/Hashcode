@@ -1,9 +1,10 @@
-from objects import GeneralInfo, Ride
+from objects import GeneralInfo, Ride, Vehicle
 
 
 def import_data(path:str):
     general_info = None
     rides = []
+    vehicles = []
     with open(path, newline='') as csvfile:
         first = True
         for i, row in enumerate(csvfile):
@@ -19,10 +20,14 @@ def import_data(path:str):
                     a[4],
                     a[5]
                 )
+                for c in range(0, general_info.float):
+                    vehicles.append(Vehicle(c, 0, 0))
+
+
                 first = False
             else:
                 rides.append(Ride(
-                    i,
+                    i-1,
                     a[0],
                     a[1],
                     a[2],
@@ -31,7 +36,7 @@ def import_data(path:str):
                     a[5]
                 ))
 
-    return general_info, rides
+    return general_info, rides, vehicles
 
 
 
