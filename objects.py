@@ -20,7 +20,7 @@ class Ride:
         self.latestfinish = f
 
     def calculate_distance(self):
-        return abs(self.a - self.b) + abs(self.b - self.y)
+        return abs(self.startrow - self.startcolumn) + abs(self.finishrow - self.finishcolumn)
 
     def weight(self):
         first = self.earlystart
@@ -48,4 +48,4 @@ class Vehicle:
         return (self.pos_x,self.pos_y)
 
     def to_export(self):
-        return str(len(self.rides)) + " ".join(self.rides)
+        return str(len(self.rides)) + " " + " ".join(self.rides)
