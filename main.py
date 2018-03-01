@@ -24,8 +24,8 @@ file_paths = [
 result_paths = [
 "result/a_example.out",
 "result/b_should_be_easy.out",
-"result/c_no_hurry.in",
-"result/d_metropolis.in",
+"result/c_no_hurry.out",
+"result/d_metropolis.out",
     "result/e_high_bonus.out"
 ]
 
