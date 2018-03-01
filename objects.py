@@ -22,6 +22,14 @@ class Ride:
     def calculate_distance(self):
         return abs(self.a - self.b) + abs(self.b - self.y)
 
+    def weight(self):
+        first = self.earlystart
+        second = self.calculate_distance()
+        third = self.calculate_distance() / (self.latestfinish - self.earlystart)
+
+        return first*third + second
+
+
 
 class Vehicle:
     def __init__(self, i:int, pos_x:int, pos_y:int):
