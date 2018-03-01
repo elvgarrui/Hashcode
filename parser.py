@@ -7,7 +7,8 @@ def import_data(path:str):
     vehicles = []
     with open(path, newline='') as csvfile:
         first = True
-        for i, row in enumerate(csvfile):
+        count = 0
+        for row in csvfile:
             a = row.split(sep=" ")
             for i, x in enumerate(a):
                 a[i] = int(x)
@@ -27,7 +28,7 @@ def import_data(path:str):
                 first = False
             else:
                 rides.append(Ride(
-                    i-1,
+                    count-1,
                     a[0],
                     a[1],
                     a[2],
@@ -35,6 +36,7 @@ def import_data(path:str):
                     a[4],
                     a[5]
                 ))
+            count += 1
 
     return general_info, rides, vehicles
 
