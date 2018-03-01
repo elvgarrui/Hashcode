@@ -29,6 +29,11 @@ class Ride:
 
         return first*third + second
 
+    def startpos(self):
+        return (self.startrow, self.startcolumn)
+
+    def finishpos(self):
+        return (self.finishrow, self.finishcolumn)
 
 
 class Vehicle:
@@ -36,7 +41,11 @@ class Vehicle:
         self.i = i
         self.pos_x = pos_x
         self.pos_y = pos_y
+        self.fulluntil = 0
         self.rides = []
+
+    def pos(self):
+        return (self.pos_x,self.pos_y)
 
     def to_export(self):
         return str(len(self.rides)) + " ".join(self.rides)
