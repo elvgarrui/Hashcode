@@ -22,10 +22,20 @@ class Ride:
     def calculate_distance(self):
         return abs(self.a - self.b) + abs(self.b - self.y)
 
+    def startpos(self):
+        return (self.startrow, self.startcolumn)
+
+    def finishpos(self):
+        return (self.finishrow, self.finishcolumn)
+
 
 class Vehicle:
     def __init__(self, i:int, pos_x:int, pos_y:int):
         self.i = i
         self.pos_x = pos_x
         self.pos_y = pos_y
+        self.fulluntil = 0
         self.rides = []
+
+    def pos(self):
+        return (self.pos_x,self.pos_y)
