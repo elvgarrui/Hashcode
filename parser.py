@@ -40,5 +40,10 @@ def import_data(path:str):
 
     return general_info, rides, vehicles
 
+def export_result(path:str, vehicles:list):
+    with open(path, mode="w+") as out_file:
+        for v in vehicles:
+            out_file.write(v.to_export() + "\n")
+
 
 

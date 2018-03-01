@@ -29,3 +29,6 @@ class Vehicle:
         self.pos_x = pos_x
         self.pos_y = pos_y
         self.rides = []
+
+    def to_export(self):
+        return str(len(self.rides)) + " ".join(self.rides)
