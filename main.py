@@ -4,7 +4,8 @@ file_path = "doc_given/a_example.in"
 result_path = "result/a_example.out"
 
 def main():
-    general_info, rides, vehicles = import_data(file_path)
+    general_info, rides_orig, vehicles = import_data(file_path)
+    rides = sorted(rides_orig, key=lambda x: x.weight(), reverse=True)
     for i in range(0,general_info.steps):
         if
 

@@ -27,7 +27,7 @@ class Ride:
         second = self.calculate_distance()
         third = self.calculate_distance() / (self.latestfinish - self.earlystart)
 
-        return first*third + second
+        return (first/third - (first/third) * second)
 
     def startpos(self):
         return (self.startrow, self.startcolumn)
