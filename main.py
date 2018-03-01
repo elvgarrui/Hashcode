@@ -6,7 +6,14 @@ result_path = "result/a_example.out"
 def main():
     general_info, rides, vehicles = import_data(file_path)
     for i in range(0,general_info.steps):
-        if
+        for v in vehicles:
+            if v.fulluntil <= i:
+                j=0
+                while(True):
+                    v.rides.append(rides[0])
+                    v.fulluntil = rides[j].
+                    rides.remove(rides[0])
+
 
 
 
